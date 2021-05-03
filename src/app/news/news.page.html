@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>news</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+<ion-content padding-horizontal>
+  <div class="title">
+    <h3>News Feed</h3>
+  </div>
+  <div class="news">
+    <ion-item lines="none" *ngFor="let news of newss" (click)="goDetails(news,$event)">
+      <div slot="start" class="thumb">
+        <img [src]="news.newsImgUrl" alt="">
+      </div>
+      <ion-label>
+        <h3 text-wrap>{{news.newsTitle}}</h3>
+        <p>
+         {{news.newsDescription}}
+        </p>
+      </ion-label>
+    </ion-item>
+  </div>
+  <div class="trending">
+    <div class="title">
+      <h3>Trending Haircuts</h3>
+    </div>
+    <div class="haircuts" >
+      <div class="hc-cards">
+        <img src="assets/imgs/hair1.png" alt="">
+        <h5>Cross Fade</h5>
+      </div>
+      <div class="hc-cards">
+        <img src="assets/imgs/hair2.png" alt="">
+        <h5>High Fade</h5>
+      </div>
+      <div class="hc-cards">
+        <img src="assets/imgs/hair1.png" alt="">
+        <h5>Short Tint</h5>
+      </div>
+    </div>
+  </div>
+</ion-content>

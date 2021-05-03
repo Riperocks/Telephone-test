@@ -1,0 +1,75 @@
+.img-background
+{
+    background: url('../../assets/imgs/background.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+
+    height: 150px;
+    width: 100%;
+    filter: blur(8px) !important;
+    -webkit-filter: blur(8px) !important;
+}
+
+.profile-item
+{
+    --background: transparent;
+    color: white !important;
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    ion-avatar{
+        border: 5px solid white !important;
+        height: 100px;
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    ion-label{
+        margin-top: -30px !important;
+        p{
+            color: white !important;
+        }
+    }
+    
+}
+
+.btn-holder
+{
+    position: absolute;
+    left: 35% !important;
+    ion-button{
+        display: inline-block !important;
+        text-transform: none !important;
+    }
+
+    #edit-btn
+    {
+        width: 120px;
+        --color: white !important;
+    }
+
+    #share-btn{
+        height: 50px !important;
+        width: 50px !important;
+        --background: white;
+        --border-radius:50%;
+        border-radius:50% !important;
+        --color:var(--ion-color-primary);
+    }
+}
+
+.count-holder
+{
+    margin-top: 50px;
+    ion-row{
+        h5,p{
+            margin: 0 !important;
+        }
+
+        .bcols
+        {
+            border-right: 1px solid #CBCBCB !important;
+        }
+    }
+}

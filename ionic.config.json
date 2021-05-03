@@ -1,0 +1,8 @@
+{
+  "name": "ionsaloon",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,56 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Products </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="openCart()" #cart>
+          <div class="cart-length">
+            {{carItemCount | async}}
+          </div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+  <div class="searchbar-holder">
+    <ion-searchbar placeholder="Search products" inputmode="email" type="decimal"></ion-searchbar>
+  </div>
+ 
+  <div class="product-list">
+    <div class="product-card" *ngFor="let product of products">
+      <ion-item lines="none">
+        <div class="thumb" slot="start">
+          <img [src]="product.pImage" alt="">
+        </div>
+        <ion-label>
+          <h2 text-wrap>{{product.pname}}</h2>
+          <p>${{product.pprice}}</p>
+        </ion-label>
+      </ion-item>
+      <ion-row>
+        <ion-col size="2" class="input-btns">
+          <ion-button (click)="remove(product)" size="small">
+            <ion-icon name="remove"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="2" class="input-col" text-center>
+          <h3> {{product.pamount}}</h3>
+        </ion-col>
+        <ion-col size="2" class="input-btns">
+          <ion-button  text-center size="small" (click)="add(product)">
+            <ion-icon name="add"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="5" text-right>
+
+        </ion-col>
+      </ion-row>
+      <div class="cart-col">
+        <ion-button (click)="addToCart(product)">
+          <img src="assets/imgs/icn-cart.svg" alt="">
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

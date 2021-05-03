@@ -1,0 +1,23 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()" size="large">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div  class="newsImg">
+      <img (click)="getDetails($event)" #header [src]="newsImg" />
+  </div>
+  
+  <div class="description-holder" padding-horizontal>
+    <h3 text-wrap>{{newsTitle}}</h3>
+    <p text-wrap>
+      {{newsDescription}}
+    </p>
+  </div>
+</ion-content>

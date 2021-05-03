@@ -1,0 +1,32 @@
+<ion-content padding fullscreen>
+  <div class="title-holder">
+    <h2>Hi, <br> Welcome back!</h2>
+  </div>
+  <div class="the-form">
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Password"></ion-input>
+    </ion-item>
+    <div class="forgot-holder" text-right (click)="goForgotPassword()">
+      <p>Forgot your password?</p>
+    </div>
+  </div>
+  <div class="btns-holder">
+    <ion-button expand="block" (click)="goTabs()"> 
+      Log In
+    </ion-button>
+    <ion-button expand="block" id="facebook">
+     Facebook
+    </ion-button>
+    <ion-button expand="block" id="google">
+     Google
+    </ion-button>
+  </div>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar text-center>
+    <h5>Don’t have an account? <span (click)="goSignup()">Sign up</span></h5>
+  </ion-toolbar>
+</ion-footer>

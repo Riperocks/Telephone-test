@@ -1,0 +1,42 @@
+ion-header
+{
+    ion-toolbar{
+        --background:transparent;
+    }
+}
+
+ion-back-button{
+    --color: white !important;
+}
+
+.btns-holder
+{
+    ion-button{
+        --color:white;
+        box-shadow:0px 12px 30px rgba(214, 176, 72, 0.25) !important;
+        font-weight: bold !important;
+        height: 40px !important;
+        text-transform: none !important;
+        
+    }
+}
+
+ion-content
+{
+    --background: url('../../assets/imgs/background.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+ion-footer{
+    ion-toolbar{
+        --background:transparent;
+        h5{
+            color: white !important;
+            span{
+                color: var(--ion-color-primary) !important;
+            }
+        }
+    }
+}

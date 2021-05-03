@@ -1,0 +1,77 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding-horizontal>
+  <ion-grid fixed>
+    <ion-row class="payment-row">
+      <h5>Payment Method</h5>
+      <ion-col size="12">
+        <ion-radio-group name="cards" [(ngModel)]="paymethod">
+          <ion-item>
+            <ion-label>Paypal</ion-label>
+            <div slot="end" class="end-slot">
+              <img src="assets/imgs/paypal.svg" alt="">
+              <ion-radio value="paypal"></ion-radio>
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Pay by card</ion-label>
+            <div slot="end" class="end-slot">
+              <img src="assets/imgs/p2.svg" alt="">
+              <ion-radio value="card"></ion-radio>
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Pay by Cash</ion-label>
+            <div slot="end" class="end-slot">
+              <img src="assets/imgs/cash.svg" alt="">
+              <ion-radio value="cash"></ion-radio>
+            </div>
+          </ion-item>
+        </ion-radio-group>
+        <div class="card-info" *ngIf="paymethod == 'card'">
+          <div class="input-item" text-left>
+            <ion-label>Card Number</ion-label>
+            <ion-item>
+              <ion-input type="text" placeholder="1234-5678-9101-2578"></ion-input>
+              <img src="assets/imgs/visa.svg" alt="" slot="end">
+            </ion-item>
+          </div>
+          <ion-row class="card-cv">
+            <ion-col size="6">
+              <ion-label>Experation Date</ion-label>
+              <ion-input type="text" placeholder="02/24"></ion-input>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label>CVV</ion-label>
+              <ion-input type="number" placeholder="567"></ion-input>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="paypal-info" *ngIf="paymethod == 'paypal'">
+          <div class="input-item" text-left>
+            <ion-label>Paypal Email</ion-label>
+            <ion-item>
+              <ion-input type="email" placeholder="abc@def.com"></ion-input>
+            </ion-item>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-item lines="none" (click)="openSuccessModal()">
+      <ion-label>Amount Payble $100</ion-label>
+      <div class="end-slot" slot="end">
+        Pay >
+      </div>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,15 @@
+ion-footer
+{
+    ion-toolbar{
+        --background: var(--ion-color-primary);
+        background: var(--ion-color-primary) !important;
+    }
+    ion-item{
+        --background:var(--ion-color-primary);
+        --color:white;
+        .end-slot{
+            text-transform: none !important;
+            font-weight: bolder !important;
+        }
+    }
+}

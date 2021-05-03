@@ -1,0 +1,247 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.modal-wrapper {
+    background: transparent !important;
+  }
+
+  ion-tab-bar {
+      --ion-tab-bar-color-activated: #D6B048;
+      --ion-tab-bar-background: #E5E5E5;
+       ion-tab-button {
+        text-align: center !important;
+        margin-top: -10px !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: 25px !important;
+        ion-label {
+          padding-top: 40px !important;
+          font-size: 0.6rem !important;
+        }
+        &:nth-child(1) {
+          background: url(./assets/imgs/tabicns/tab1.svg);
+        }
+        &:nth-child(2) {
+          background: url(./assets/imgs/tabicns/tab2.svg);
+        }
+        &:nth-child(3) {
+        }
+        &:nth-child(4) {
+          background: url(./assets/imgs/tabicns/tab3.svg);
+        }
+        &:nth-child(5) {
+          background: url(./assets/imgs/tabicns/tab4.svg);
+        }
+    
+        &[aria-selected="true"] {
+          &:nth-child(1) {
+            background: url(./assets/imgs/tabicns/tab1a.svg);
+          }
+          &:nth-child(2) {
+            background: url(./assets/imgs/tabicns/tab2a.svg);
+          }
+          &:nth-child(3) {
+          }
+          &:nth-child(4) {
+            background: url(./assets/imgs/tabicns/tab3a.svg);
+          }
+          &:nth-child(5) {
+          background: url(./assets/imgs/tabicns/tab4a.svg);
+            }
+        }
+      }
+  }
+
+  .title-holder
+{
+  h2{
+    color: white !important;
+  }
+}
+
+.the-form
+{
+  margin: 30px 0;
+  ion-item{
+    --border-radius:10px;
+    margin: 10px 0 !important;
+  }
+
+  .forgot-holder
+  {
+    p{
+      color: var(--ion-color-primary) !important;
+    }
+  }
+}
+
+.bbr-slide
+{
+  padding: 0 10px !important;
+    ion-radio-group{
+      width: 100% !important;
+        ion-row{
+            ion-col{
+                ion-item{
+                  background: white !important;
+                  border-radius: 10px !important;
+                  padding: 10px 0 !important;
+                  --padding-start:5px;
+                  box-shadow:0px 12px 30px rgba(214, 176, 72, 0.25) !important;
+                    ion-avatar{
+                        margin-right: 10px !important;
+                        img{
+                            height: 40px !important;
+                            width: 40px !important;
+                        }
+                    }
+
+                    ion-label{
+                      font-size: 0.7rem !important;
+                    }
+
+                    ion-radio{
+                      width: 100% !important;
+                      height: 100% !important;
+                      position: absolute !important;
+                      opacity: 0 !important;
+                    }
+                }
+            }
+        }
+
+        .item-radio-checked {
+          --color: white !important;
+          --background: var(--ion-color-primary);
+          background: var(--ion-color-primary) !important;
+        }
+    }
+  
+}
+
+.button-selector2{
+  ion-radio-group{
+      ion-item{
+          --border-radius:5px;
+          border-radius: 5px !important;
+          font-size: 0.8rem !important;
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
+          ion-radio{
+              height: 0 !important;
+              width: 0 !important;
+          }
+      }
+  }
+
+  .item-radio-checked {
+      --color: white !important;
+      --background: var(--ion-color-primary);
+    }
+}
+
+.payment-row
+{
+  h5{
+    margin-top: 0 !important;
+  }
+    ion-item{
+        box-shadow:0px 5px 5px rgba(0, 0, 0, 0.05) !important;
+        margin: 10px 0 !important;
+        .end-slot{
+            img,ion-radio{
+                display: inline-block !important;
+            }
+
+            img{
+                margin-bottom: 8px !important;
+                margin-right: 5px !important;
+            }
+        }
+    }
+
+    .input-item{
+        margin: 20px 0 !important;
+    }
+
+    .card-cv
+    {
+        ion-label{
+            font-size: 1rem !important;
+        }
+    }
+}
+
+hr{
+  border-top: 1px solid #E7E6E6;
+}
+
+.total-holder
+{
+  ion-button{
+    --color: white;
+    box-shadow: 0px 12px 30px rgba(214, 176, 72, 0.25) !important;
+    font-weight: bold !important;
+    height: 40px !important;
+    text-transform: none !important;
+  }
+}
+
+.haircuts
+{
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  white-space: nowrap !important;
+  &::-webkit-scrollbar {
+    display: none !important;
+ }
+
+ .hc-cards
+ {
+   display: inline-block !important;
+   width: 120px;
+   margin: 0 10px;
+   h5{
+     margin-top: 0 !important;
+   }
+   img{
+     height: 100px;
+     width: 100px;
+     border-radius: 10px;
+   }
+ }
+}
+
+.searchbar-holder
+{
+  ion-searchbar{
+    .searchbar-input {
+      box-shadow: none !important;
+      box-shadow:0px 2px 20px rgba(0, 0, 0, 0.06) !important;
+    }
+  }
+}

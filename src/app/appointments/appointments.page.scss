@@ -1,0 +1,76 @@
+ion-content{
+
+    .segments-holder
+    {
+        margin-bottom: 10px !important;
+    }
+    .sections
+    {
+        .the-list
+        {
+            .appointment{
+                #closer{
+                    background: #fdedc2 !important;
+                }
+                .date-row
+                {
+                    padding-top: 20px !important;
+                    h5{
+                        font-size: 1rem !important;
+                        font-weight: bold !important;
+                    }
+
+                    p{
+                        font-size: 0.7rem;
+
+                    }
+                    h5,p{
+                        margin: 0 !important;
+                    }
+                }
+
+                .details-col
+                {
+                    ion-item{
+                        border: 1px solid whitesmoke !important;
+                        border-radius: 5px !important;
+                    }
+                }
+            }
+            .appointmentp{
+                #ok{
+                    background: #d7ffc6 !important;
+                }
+
+                #missed{
+                    background: #ffe5e5 !important;
+                }
+                .date-row
+                {
+                    padding-top: 20px !important;
+                    h5{
+                        font-size: 1rem !important;
+                        font-weight: bold !important;
+                    }
+
+                    p{
+                        font-size: 0.7rem;
+
+                    }
+                    h5,p{
+                        margin: 0 !important;
+                    }
+                }
+
+                .details-col
+                {
+                    ion-item{
+                        border: 1px solid whitesmoke !important;
+                        border-radius: 5px !important;
+                    }
+                }
+            }
+            
+        }
+    }
+}

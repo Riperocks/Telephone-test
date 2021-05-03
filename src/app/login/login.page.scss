@@ -1,0 +1,56 @@
+ion-header
+{
+    ion-toolbar{
+        --background:transparent;
+    }
+}
+
+ion-back-button{
+    --color: white !important;
+}
+
+ion-content
+{
+    --background: url('../../assets/imgs/background.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    
+    .title-holder
+    {
+        margin-top: 20vw;
+    }
+
+    .btns-holder{
+        margin-top: 18vw;
+        ion-button{
+            --color:white;
+            font-weight: bold !important;
+            height: 42px !important;
+            margin: 10px 0 !important; 
+            text-transform: none !important;
+        }
+        #facebook
+        {
+            --background:#1567EA;
+        }
+
+        #google
+        {
+            --background: #F44747;
+        }
+    }
+}
+
+
+ion-footer{
+    ion-toolbar{
+        --background:transparent;
+        h5{
+            color: white !important;
+            span{
+                color: var(--ion-color-primary) !important;
+            }
+        }
+    }
+}

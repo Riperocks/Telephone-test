@@ -1,0 +1,76 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>My Cart</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()" fill="clear" color="dark">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+    <ion-list>
+      <ion-item *ngFor="let p of cart" class="ion-text-wrap">
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="2" class="ion-align-self-center">
+
+            </ion-col>
+
+            <ion-col size="2" class="ion-align-self-center">
+            </ion-col>
+            <ion-col size="2" class="ion-align-self-center">
+            </ion-col>
+            <ion-col size="2" offset="4">
+              <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
+                <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="9">
+              <b>{{p.pname}}</b>
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+              ${{p.pamount * p.pprice}}
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="2" class="ion-align-self-center">
+              <ion-button color="medium" fill="clear" (click)="deCreaseCartItem(p)">
+                <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="2" class="ion-align-self-center" text-center>
+              {{p.pamount}}
+            </ion-col>
+            <ion-col size="2" class="ion-align-self-center">
+              <ion-button color="primary" fill="clear" (click)="increaseCartItem(p)">
+                <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="9">
+              Total:
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+              ${{getTotal()}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" id="checkout-btn" (click)="goPayment()">
+     Continue
+    </ion-button>
+  </div>
+</ion-content>
